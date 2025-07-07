@@ -24,11 +24,13 @@ II-A. Basic Fingerprint Localization (基本指紋定位)
 
 2.概率性方法 (Probabilistic Methods)
 核心思想：視位置𝑥與信號𝑠為隨機變量，建立後驗機率模型𝑃(𝑥|𝑠)或似然模型P(s∣x)，並通過最大後驗 (MAP) 或最大似然估計 (MLE) 確定位置：
-x^ =argmaxP(x∣s)⟷arg_x max P(x|s) ⟷ \[
-\arg\max_{x} P(x \mid s)
-\;\Longleftrightarrow\;
-\arg\max_{x} \prod_{l=1}^{L} P\bigl(s_{l}\mid x\bigr)
+```latex
+\[
+  \arg\max_{x} P(x \mid s)
+  \;\Longleftrightarrow\;
+  \arg\max_{x} \prod_{l=1}^{L} P\bigl(s_{l}\mid x\bigr)
 \]
+
 
 典型系統：
 
