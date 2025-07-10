@@ -4,7 +4,7 @@ code:
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 
-# can be updated to include a greater variety of parameters and their values to explore
+## can be updated to include a greater variety of parameters and their values to explore
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import RandomizedSearchCV  # 或 GridSearchCV
 
