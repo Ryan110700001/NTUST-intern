@@ -4,11 +4,11 @@ code:
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 
-## can be updated to include a greater variety of parameters and their values to explore
+### can be updated to include a greater variety of parameters and their values to explore
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import RandomizedSearchCV  # 或 GridSearchCV
 
-# 1. 定義要搜尋的參數格線
+### 1. 定義要搜尋的參數格線
 param_dist = {
     'n_estimators':      [50, 100, 150],
     'max_features':      ['sqrt', 'log2'],
@@ -18,10 +18,10 @@ param_dist = {
     'bootstrap':         [True]
 }
 
-# 基底模型
+### 基底模型
 forest = RandomForestRegressor(random_state=42, n_jobs=-1)
 
-# 隨機搜尋：只試 10 組參數
+### 隨機搜尋：只試 10 組參數
 rand_search = RandomizedSearchCV(
     estimator=forest,
     param_distributions=param_dist,
@@ -33,13 +33,13 @@ rand_search = RandomizedSearchCV(
     return_train_score=False
 )
 
-# 執行
+### 執行
 rand_search.fit(feats_train, targets_train)
 
-# 5. 查看最佳參數
+### 5. 查看最佳參數
 print("Best params:", rand_search.best_params_)
 
-# you can check out the result details in a dataframe format
+### you can check out the result details in a dataframe format
 cvres = rand_search.cv_results_
 pd.set_option("max_colwidth", 80)
 df_cvres = pd.DataFrame(cvres)
