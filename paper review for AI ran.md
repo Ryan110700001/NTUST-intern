@@ -19,4 +19,6 @@
    - This article addresses resource management, providing:  
      1. Load balancing and migration in multi‑device/multi‑server scenarios  
      2. Location‑Aware VM Scheduling (ARCES)  
-5.  
+5. **Resource-Efficient Generative AI Model Deployment in Mobile Edge Networks**
+   - This article provides both deployment constraints and  Computing resource requirements for AI models at edge nodes, should be the best one according to the need.
+   - 
