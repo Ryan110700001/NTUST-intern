@@ -22,4 +22,13 @@
      2. Location‑Aware VM Scheduling (ARCES)  
 5. **Resource-Efficient Generative AI Model Deployment in Mobile Edge Networks**
    - This article provides both deployment constraints and  Computing resource requirements for AI models at edge nodes, should be the best one according to the need.
-   - 
+  
+
+note we have to calculate this parameters to  estimate our  AI model’s energy consumption using the paper’s framework:
+<img width="907" height="501" alt="image" src="https://github.com/user-attachments/assets/e3f22953-e58f-4e2f-8037-6541bdec096b" />
+than we put the parameter into this function to get the optimized result<img width="572" height="101" alt="image" src="https://github.com/user-attachments/assets/e96bd34e-0b22-4794-86db-8687240e8284" />
+
+
+
+
+
