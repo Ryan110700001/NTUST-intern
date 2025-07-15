@@ -1,6 +1,7 @@
 ## IV. DEPLOYMENT AND RESOURCE REQUIREMENTS FOR AI MODELS IN MOBILE NETWORK NODES
 
-### Selected Papers and Rationale
+### Selected Papers and Rationale  keyword:<img width="1682" height="185" alt="image" src="https://github.com/user-attachments/assets/9b4fe05e-77b4-45c6-aa01-e3bf776b6f56" />
+
 
 #### For Computing Resources
 1. **Resource Allocation for Network Slicing in Open RAN**
