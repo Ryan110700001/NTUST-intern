@@ -17,9 +17,9 @@
      3. Several MEC optimization algorithms  
      4. Simulation performance results
 for multi mobile edge computing, we can use the following to optimize our performance:
-## Step‑by‑Step Preparation Checklist
 
-## Step‑by‑Step Preparation Checklist
+
+### Preparation Checklist
 
 | Step                                             | Description                                                              | Prepared?   |
 |--------------------------------------------------|--------------------------------------------------------------------------|-------------|
@@ -27,6 +27,29 @@ for multi mobile edge computing, we can use the following to optimize our perfor
 | Set total budget threshold                       | Operator capex limit; ensure `expenses(s) < B_thresh`                    | - [ ]       |
 | Configure Bayesian TPE – warm‑up iterations      | Number of warm‑up iterations (not specified in paper; to decide)         | - [ ]       |
 | Configure Bayesian TPE – optimization iterations | Number of optimization iterations (N<sub>iterations</sub> = 1000)        | - [ ]       |
+## CMMRA Optimization Workflow
+
+1. **Warm‑up Phase**  
+   Repeat **N<sub>warmup</sub>** times:  
+Evaluate  
+\[  
+  f(s,u) = \frac{N_{\text{failed}}(s,u)}{N_T}  
+\]  
+via Monte Carlo (trial_count = 1000) and insert `(s, f(s,u))` into `sample_set`. :contentReference[oaicite:0]{index=0}
+
+2. **Main Iteration Phase**  
+For **i = 1…N<sub>iterations</sub>**:  
+- Build densities **l(s)** and **g(s)** from `sample_set` via Parzen estimation.  
+- Sample a `candidate_set` from **l(s)**.  
+- For each candidate **s<sub>i</sub>**, compute Expected Improvement:  
+  \[  
+    \mathrm{EI}(s_i) \propto \Bigl(\gamma + \tfrac{g(s_i)}{l(s_i)}\,(1-\gamma)\Bigr)^{-1}  
+  \]  
+- Pick **s*** with highest EI, evaluate **f(s*,u)** (Monte Carlo), and add `(s*, f(s*,u))` to `sample_set`. :contentReference[oaicite:1]{index=1}
+
+3. **Select Optimal Configuration**  
+- From `sample_set`, choose the configuration **s*** with the smallest **f(s,u)** as the (approximate) global optimum. :contentReference[oaicite:2]{index=2}
+
 
 
 4. **Resource Management Across Edge Servers in Mobile Edge Computing**  
