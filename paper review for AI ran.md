@@ -2,7 +2,7 @@
 
 ### Selected Papers and Rationale  keyword:<img width="1682" height="185" alt="image" src="https://github.com/user-attachments/assets/9b4fe05e-77b4-45c6-aa01-e3bf776b6f56" />
 ### Prompt for Chatgpt:
-""you are a professional journal reader, pls first determine whether this paper conform to my need, my need is IV. DEPLOYMENT AND RESOURCE REQUIREMENTS FOR
+1.""you are a professional journal reader, pls first determine whether this paper conform to my need, my need is IV. DEPLOYMENT AND RESOURCE REQUIREMENTS FOR
 AI MODELS IN MOBILE NETWORK NODES
 This section analyzes the deployment constraints and computational resources for AI models in mobile network nodes.
 We evaluate the deployment conditions and resource allocation
@@ -14,14 +14,15 @@ nodes
 B. Computing resource requirements for AI models in mobile
 network nodes
 AI deployment in RAN, MEC, and core nodes differs in
-latency constraints, data types, and model sizes [21].
+latency constraints, data types, and model sizes
 Real-time inference at the edge demands lightweight models
 with localized training and decision-making [22].
 Centralized training and distributed inference architectures
-face trade-offs in accuracy, efficiency, and cost [23].
-Different scenarios require tailored resource allocation policies for computing, memory, and bandwidth [24].
+face trade-offs in accuracy, efficiency, and cost 
+Different scenarios require tailored resource allocation policies for computing, memory, and bandwidth
 A systematic framework is needed to model AI workload
-requirements and match them to node capabilities [20]
+requirements and match them to node capabilities.
+2. ""list the requirement I need to do this experiment""
 ### For Computing Resources
  #### 1.Resource Allocation for Network Slicing in Open RAN
    This article is about Network slicing, seems that not so suited within the topic, if we aren't doing similar things can delete this.
