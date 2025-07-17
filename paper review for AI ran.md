@@ -1,29 +1,22 @@
 ## IV. DEPLOYMENT AND RESOURCE REQUIREMENTS FOR AI MODELS IN MOBILE NETWORK NODES
 
 ### Selected Papers and Rationale  keyword:<img width="1682" height="185" alt="image" src="https://github.com/user-attachments/assets/9b4fe05e-77b4-45c6-aa01-e3bf776b6f56" />
-
-
-#### For Computing Resources
-1. **Resource Allocation for Network Slicing in Open RAN**
+### For Computing Resources
+ #### 1.Resource Allocation for Network Slicing in Open RAN
    This article is about Network slicing, seems that not so suited within the topic, if we aren't doing similar things can delete this.
-3. **Modelling of Computational Resources for 5G RAN**  
+#### 2.Modelling of Computational Resources for 5G RAN  
    - This article covers the cost of implementing O‑RAN and BBU on GPP, providing constraints for:  
      1. Real‑Time Latency Budget  
      2. Virtualization Delay vs. Isolation Trade‑off  
      3. Minimum CPU Frequency Requirement
-### Deployment constraints
+   **Deployment constraints**
 HARQ timing budget: It highlights that 5G RAN’s BBU processing must complete within 3 ms to satisfy the HARQ subframe deadline, and shows experimentally that container‑based virtualization adds negligible overhead at typical CPU frequencies—thereby meeting this strict latency constraint when choosing a deployment platform 
 Virtualization platform selection: By comparing VMs, containers, and unikernels, the study demonstrates that containers offer the best trade‑off of isolation vs. deployment and runtime delay, establishing a practical deployment constraint for low‑latency RAN functions
-### Computing‑resource requirements
-
+   **Computing‑resource requirements**
 Per‑VNF profiling: Using OAI’s dlsim/ulsim tools, it measures processing times for each PHY block (FFT/IFFT, modulation/demodulation, encoding/decoding) across CPU frequencies, MCS indices, and PRB counts, revealing that decoding is almost twice as expensive as encoding and that higher MCS indices drive exponential time increases.
 Polynomial complexity model: It then fits these measurements with a Lasso‑regularized polynomial, providing a closed‑form estimator of processing time as a function of CPU frequency, PRB count, and MCS index.<img width="279" height="88" alt="image" src="https://github.com/user-attachments/assets/ea098a81-10b9-4841-ada9-565c02e10d21" />
-Systematic framework: This model serves as the “missing link” for elastic resource management—allowing a VIM or scheduler to map VNF workloads to node capacities in real time, based on predicted processing delays 
-.
-
-Together, these results give you (A) the latency and virtualization constraints under which VNFs must run, and (B) precise formulas to estimate the CPU resources needed for each function, thus solving the partial question on deployment constraints and compute‑resource requirements.
-
-4. **Cost‑Effective Resource Allocation for Multitier Mobile Edge Computing in 5G Mobile Network**  
+Systematic framework: This model serves as the “missing link” for elastic resource management—allowing a VIM or scheduler to map VNF workloads to node capacities in real time, based on predicted processing delays.Together, these results give you  the latency and virtualization constraints under which VNFs must run, and precise formulas to estimate the CPU resources needed for each function, thus solving the partial question on deployment constraints and compute‑resource requirements.
+### 3.Cost‑Effective Resource Allocation for Multitier Mobile Edge Computing in 5G Mobile Network**  
    - This article focuses on MEC and offers:  
      1. Survey of related MEC optimization work  
      2. Model of deployment cost  
@@ -32,10 +25,7 @@ Together, these results give you (A) the latency and virtualization constraints 
 for multi mobile edge computing, we can use the following to optimize our performance:
 
 
-### Preparation Checklist
-
-Preparation Checklist
-
+**Preparation Checklist**
 | preparation                                              | Symbol                          | Description                                                             | Prepared?   |
 |---------------------------------------------------|---------------------------------|-------------------------------------------------------------------------|-------------|
 | Prepare fixed system parameters                   | **u**                           | Task complexity (D<sub>i</sub>), computational intensity (I<sub>i</sub>), throughput, UE count, CPU frequency | - [ ]       |
@@ -43,8 +33,7 @@ Preparation Checklist
 | Configure Bayesian TPE – warm‑up iterations       | **N<sub>warmup</sub>**         | Number of warm‑up iterations (not specified in paper; to decide)       | - [ ]       |
 | Configure Bayesian TPE – optimization iterations  | **N<sub>iterations</sub> = 1000** | Number of optimization iterations                                       | - [ ]       |
 
-## CMMRA Optimization Workflow
-
+**CMMRA Optimization Workflow**
 1. **Warm‑up Phase**  
    Repeat **N<sub>warmup</sub>** times:  
 Evaluate  
@@ -66,15 +55,13 @@ For **i = 1…N<sub>iterations</sub>**:
 
 
 
-4. **Resource Management Across Edge Servers in Mobile Edge Computing**  
+ ### 4.Resource Management Across Edge Servers in Mobile Edge Computing
    - This article addresses resource management, providing:  
      1. Load balancing and migration in multi‑device/multi‑server scenarios  
      2. Location‑Aware VM Scheduling (ARCES)
-
    
-5. **Resource-Efficient Generative AI Model Deployment in Mobile Edge Networks**
-   - This article provides both deployment constraints and  Computing resource requirements for AI models at edge nodes, should be the best one according to the need.
-  
+### 5.Resource-Efficient Generative AI Model Deployment in Mobile Edge Networks
+   - This article provides both deployment constraints and  Computing resource requirements for AI models at edge nodes, should be the best one according to the need.  
 
 note we have to calculate this parameters to  estimate our  AI model’s energy consumption using the paper’s framework:
 <img width="907" height="501" alt="image" src="https://github.com/user-attachments/assets/e3f22953-e58f-4e2f-8037-6541bdec096b" />
