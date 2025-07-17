@@ -15,7 +15,17 @@
      1. Survey of related MEC optimization work  
      2. Model of deployment cost  
      3. Several MEC optimization algorithms  
-     4. Simulation performance results  
+     4. Simulation performance results
+for multi mobile edge computing, we can use the following to optimize our performance:
+## Step‑by‑Step Preparation Checklist
+
+| Step                                               | Symbol         | Description                                                               | Prepared? |
+|----------------------------------------------------|----------------|---------------------------------------------------------------------------|-----------|
+| Prepare fixed system parameters                    | **u**          | Task complexity (D_i), computational intensity (I_i), throughput, UE count, CPU frequency | [ ]       |
+| Set total budget threshold                         | **B<sub>thresh</sub>** | Operator capex limit; ensure `expenses(s) < B_thresh`                     | [ ]       |
+| Configure Bayesian TPE – warm‑up iterations        | **N<sub>warmup</sub>** | Number of warm‑up iterations (not specified in paper; to decide)         | [ ]       |
+| Configure Bayesian TPE – optimization iterations   | **N<sub>iterations</sub> = 1000** | Number of optimization iterations                                         | [ ]       |
+
 4. **Resource Management Across Edge Servers in Mobile Edge Computing**  
    - This article addresses resource management, providing:  
      1. Load balancing and migration in multi‑device/multi‑server scenarios  
