@@ -19,7 +19,9 @@
 4. **Resource Management Across Edge Servers in Mobile Edge Computing**  
    - This article addresses resource management, providing:  
      1. Load balancing and migration in multi‑device/multi‑server scenarios  
-     2. Location‑Aware VM Scheduling (ARCES)  
+     2. Location‑Aware VM Scheduling (ARCES)
+
+   
 5. **Resource-Efficient Generative AI Model Deployment in Mobile Edge Networks**
    - This article provides both deployment constraints and  Computing resource requirements for AI models at edge nodes, should be the best one according to the need.
   
@@ -27,6 +29,7 @@
 note we have to calculate this parameters to  estimate our  AI model’s energy consumption using the paper’s framework:
 <img width="907" height="501" alt="image" src="https://github.com/user-attachments/assets/e3f22953-e58f-4e2f-8037-6541bdec096b" />
 than we put the parameter into this function to get the optimized result<img width="572" height="101" alt="image" src="https://github.com/user-attachments/assets/e96bd34e-0b22-4794-86db-8687240e8284" />
+**the paper mentioned an algorithm for Genetic Algorithm–based Model‑Level Deployment Decision Selection which is to efficiently approximate the optimal solution of the NP‑hard edge‐deployment problem.<img width="660" height="665" alt="image" src="https://github.com/user-attachments/assets/85811e8e-3240-4317-aab3-ae82d3ba873c" />
 
 
 
