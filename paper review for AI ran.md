@@ -19,12 +19,15 @@
 for multi mobile edge computing, we can use the following to optimize our performance:
 ## Step‑by‑Step Preparation Checklist
 
-| Step                                               | Symbol         | Description                                                               | Prepared? |
-|----------------------------------------------------|----------------|---------------------------------------------------------------------------|-----------|
-| Prepare fixed system parameters                    | **u**          | Task complexity (D_i), computational intensity (I_i), throughput, UE count, CPU frequency | [ ]       |
-| Set total budget threshold                         | **B<sub>thresh</sub>** | Operator capex limit; ensure `expenses(s) < B_thresh`                     | [ ]       |
-| Configure Bayesian TPE – warm‑up iterations        | **N<sub>warmup</sub>** | Number of warm‑up iterations (not specified in paper; to decide)         | [ ]       |
-| Configure Bayesian TPE – optimization iterations   | **N<sub>iterations</sub> = 1000** | Number of optimization iterations                                         | [ ]       |
+## Step‑by‑Step Preparation Checklist
+
+| Step                                             | Description                                                              | Prepared?   |
+|--------------------------------------------------|--------------------------------------------------------------------------|-------------|
+| Prepare fixed system parameters                  | Task complexity (D<sub>i</sub>), computational intensity (I<sub>i</sub>), throughput, UE count, CPU frequency | - [ ]       |
+| Set total budget threshold                       | Operator capex limit; ensure `expenses(s) < B_thresh`                    | - [ ]       |
+| Configure Bayesian TPE – warm‑up iterations      | Number of warm‑up iterations (not specified in paper; to decide)         | - [ ]       |
+| Configure Bayesian TPE – optimization iterations | Number of optimization iterations (N<sub>iterations</sub> = 1000)        | - [ ]       |
+
 
 4. **Resource Management Across Edge Servers in Mobile Edge Computing**  
    - This article addresses resource management, providing:  
