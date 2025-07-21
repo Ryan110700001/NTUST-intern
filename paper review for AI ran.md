@@ -7,7 +7,7 @@ AI MODELS IN MOBILE NETWORK NODES
 This section analyzes the deployment constraints and computational resources for AI models in mobile network nodes.
 We evaluate the deployment conditions and resource allocation
 strategies for AI models based on the varying requirements
-of different network nodes, including latency tolerance, bandwidth constraints, types of data collection, and inference cycles
+of different network nodes, including latency tolerance, bandwidth constraints, types of data collection, and inference cycles
 to enhance the feasibility assessment.
 A. Deployment constraints for AI models in mobile network
 nodes
@@ -81,8 +81,9 @@ For **i = 1…N<sub>iterations</sub>**:
    - This article addresses resource management, providing:  
      1. Load balancing and migration in multi‑device/multi‑server scenarios  
      2. Location‑Aware VM Scheduling (ARCES)
+### For AI Model Deployment
    
-### 5.Resource-Efficient Generative AI Model Deployment in Mobile Edge Networks
+### 1.Resource-Efficient Generative AI Model Deployment in Mobile Edge Networks
    - This article provides both deployment constraints and  Computing resource requirements for AI models at edge nodes, should be the best one according to the need.  
 
 note we have to calculate this parameters to  estimate our  AI model’s energy consumption using the paper’s framework:
