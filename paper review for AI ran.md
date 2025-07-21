@@ -4,7 +4,7 @@
 ### Prompt for Chatgpt:
 1.""you are a professional journal reader, pls first determine whether this paper conform to my need, my need is IV. DEPLOYMENT AND RESOURCE REQUIREMENTS FOR
 AI MODELS IN MOBILE NETWORK NODES
-This section analyzes the deployment constraints and computational resources for AI models in mobile network nodes.
+This section analyzes the deployment constraints and computational resources for AI models in mobile network nodes.
 We evaluate the deployment conditions and resource allocation
 strategies for AI models based on the varying requirements
 of different network nodes, including latency tolerance, bandwidth constraints, types of data collection, and inference cycles
