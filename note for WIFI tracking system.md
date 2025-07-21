@@ -3,8 +3,15 @@
 This document summarizes the paper’s main findings, key points, implementation details, experimental setup, abstract analysis, and mathematical formulations.
 
 ---
+## 1. Abstract Analysis
 
-## 1. Main Findings
+* **Challenge**: CSI phase errors cause ambiguous Doppler sign.
+* **Insight**: Exploit large-scale fading for direction.
+* **Modeling**: Ray tracing → two power profiles (toward/away).
+* **Processing**: STFT → Doppler power; DDTW → direction matching.
+* **Result**: 0.84 m median tracking error on Intel 5300 hardware. fileciteturn5file0
+
+## 2. Main Findings
 
 * **Fading-Based Direction Estimation**: Leverages large-scale fading (path-loss variations) to resolve Doppler sign ambiguity in CSI, turning a traditional “foe” of communications into a “friend” for device-free tracking.
 * **Ray-Tracing Profiling**: Introduces a simplified ray-tracing model to characterize received-power profiles for targets moving toward vs. away from the Tx–Rx link.
@@ -13,7 +20,7 @@ This document summarizes the paper’s main findings, key points, implementation
 
 ---
 
-## 2. Key Point from Each Paragraph
+## 3. Key Point from Each Paragraph
 
 1. **Abstract**: Proposes turning Wi‑Fi fading into a tool for direction estimation, coupling STFT-based Doppler power extraction with DDTW, yielding 0.84 m median error. fileciteturn0file0
 2. **Introduction 1**: Argues the necessity of device‑free tracking for applications where targets cannot carry devices. fileciteturn0file0
@@ -60,17 +67,10 @@ This document summarizes the paper’s main findings, key points, implementation
 
 ---
 
-## 5. Abstract Analysis
-
-* **Challenge**: CSI phase errors cause ambiguous Doppler sign.
-* **Insight**: Exploit large-scale fading for direction.
-* **Modeling**: Ray tracing → two power profiles (toward/away).
-* **Processing**: STFT → Doppler power; DDTW → direction matching.
-* **Result**: 0.84 m median tracking error on Intel 5300 hardware. fileciteturn5file0
 
 ---
 
-## 6. Mathematical Formulation
+## 5. Mathematical Formulation
 
 ### CSI Signal Model
 
