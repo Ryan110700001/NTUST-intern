@@ -1,7 +1,7 @@
 ```md
-## 2025/07/23‑hh.mm
+## 2025/07/23‑14:10~15:30
 - *Recording*: https://www.youtube.com/watch?v=r59_n3PZACw
-- *Attendees*: [to be provided]
+- *Attendees*: Ian, Ryan, Justin, Marc
 - *Topic*: AI RAM Research Paper Outline and Literature Review
 - *Summary*:  
   The team reviewed key literature‐search strategies for the AI RAM paper, including survey and use‑case sources from academic groups (e.g. Northeastern University, Urekom) and industry alliances (Orin Alliance, Nvidia). Standardization efforts (A1, E2, Air1, SMEO) and proposed architectures integrating AI into SMO assemblies were discussed. Participants examined module toolkits (OC Lab, Nvidia Omniverse/SH RT) and explored application scenarios like energy‑saving apps, real‑time traffic prediction, and digital twins. Emphasis was placed on maintaining logical flow between sections, proper citation practices, and marking revisions for review. Next steps include detailed section drafting, weekly lab meetings, and milestone scheduling around upcoming exams.
