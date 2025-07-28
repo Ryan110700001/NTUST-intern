@@ -48,8 +48,6 @@ The architecture supports seamless integration across:
 
 Each domain provides **technology-agnostic APIs** to ensure interoperability while maintaining domain-specific implementations internally.
 
----
-
 ## 🔧 Challenges Addressed
 
 - **Extension to non-deterministic domains**: Optional modules can be deployed to enhance legacy domains with deterministic capabilities.
@@ -57,15 +55,6 @@ Each domain provides **technology-agnostic APIs** to ensure interoperability whi
 
 ---
 
-## ✅ Relevance to "Demonstration Architectures"
-
-| Criterion | Assessment | Description |
-|----------|------------|-------------|
-| System-level reference design | ✅✅✅✅ | Clear AICP + MDP architecture with component-level detail |
-| Modular functional decomposition | ✅✅✅✅ | Describes MS, MD, and orchestration layers |
-| Multi-domain and cross-layer orchestration | ✅✅✅✅ | Strong emphasis on interoperability across 3GPP, DetNet, TSN |
-| AI/ML integration | ✅✅✅ | Covers model training, orchestration, and registry layers |
-| Prototype/deployment details | ✅✅ | High-level discussion; actual testbed development TBD |
 
 ---
 
