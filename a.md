@@ -82,6 +82,42 @@ The architecture is composed of **two main pillars**:
 - **RIS-assisted Digital Twins** for predictive resource allocation
 - **User localization & traffic estimation** for network-level optimization
 
+##  C.Potential implementation challenges
+### Open RAN: Challenges for Next Generation Mobile Networks – Summary
+
+### l Implementation Challenges
+
+#### 1. AI/ML Model Deployment and Placement
+- **Section III.A.2** discusses AI model orchestration across the **RIC, edge, and centralized cloud** layers.
+- Introduces **OrchestRAN**, a platform for optimizing AI placement.
+- Emphasizes **context-aware placement** based on data availability, privacy, latency, and bandwidth.
+
+#### 2. Inference Delay and Resource Optimization
+- Highlights trade-offs between **low latency edge inference** and **higher-accuracy centralized inference**.
+- Discusses **service reliability vs. resource efficiency** trade-offs.
+- Introduces **intelligent agents (IAs)** to manage lifecycle and optimize inference delay.
+
+#### 3. Memory and Compute Constraints
+- Proposes **modular model design** where unnecessary modules are pruned to reduce memory footprint.
+- Advocates for **model retraining based on drift types** (sudden, gradual, incremental, recurring).
+
+#### 4. Edge/Cloud Deployment Trade-offs
+- Details **pros and cons** of deploying intelligence at:
+  - Edge: low latency, high privacy, limited compute
+  - Cloud: high capacity, increased delay, central control
+- Calls for **hybrid orchestration** strategies based on system dynamics.
+
+#### 5. Training Data & Real-World Data Collection
+- need for real testbed data.
+- Mentions open-source testbeds like **Colosseum**, **Arena**, **POWDER-RENEW**.
+- Highlights the lack of publicly available, labeled, context-rich datasets for RAN AI training.
+
+#### 6. Operational and Integration Challenges
+- Identifies key issues with **multi-vendor interoperability** in O-RAN.
+- Addresses challenges in testing, version control, and interface standardization.
+- Introduces concepts like **Zero-Touch Automation (i-ZTA)** and **Intent-Based Networking (IBN)** to simplify management.
+
+
 
 
 
