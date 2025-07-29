@@ -24,7 +24,6 @@ The architecture is composed of **two main pillars**:
 - <img width="851" height="376" alt="image" src="https://github.com/user-attachments/assets/7d131c81-866d-4949-8088-1e50c58ef5f1" />
 
 - **Fig. 3**: Multi-domain management and integration
-
 ---
 
 ### 🤖 AI/ML Integration
@@ -35,23 +34,9 @@ The architecture is composed of **two main pillars**:
 - **Dataset & Model Registries**: Metadata management for models and datasets
 - **Digital Twin (DT)**: Supports real-time simulation and predictive analysis
 
-These components enable:
-- Proactive SLA monitoring
-- Cross-domain adaptation
-- Self-healing and intelligent fault recovery
 
-### 🌐 Multi-Domain Operation
-The architecture supports seamless integration across:
-- **3GPP domains**: using NEF for configuration and automation
-- **DetNet domains**: via path computation, topology exposure
-- **IEEE TSN domains**: for time synchronization and deterministic flows
 
-Each domain provides **technology-agnostic APIs** to ensure interoperability while maintaining domain-specific implementations internally.
 
-## 🔧 Challenges Addressed
-
-- **Extension to non-deterministic domains**: Optional modules can be deployed to enhance legacy domains with deterministic capabilities.
-- **5G–6G transition**: PREDICT-6G provides a pathway to upgrade 5G systems by layering deterministic and AI-enhanced capabilities.
 
 ---
 
