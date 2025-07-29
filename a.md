@@ -24,7 +24,7 @@ The architecture is composed of **two main pillars**:
 - <img width="851" height="376" alt="image" src="https://github.com/user-attachments/assets/7d131c81-866d-4949-8088-1e50c58ef5f1" />
 
 - **Fig. 3**: Multi-domain management and integration
----
+  
 
 ### 🤖 AI/ML Integration
 
@@ -35,13 +35,69 @@ The architecture is composed of **two main pillars**:
 - **Digital Twin (DT)**: Supports real-time simulation and predictive analysis
 
 
+### BeGREEN: Beyond 5G Energy Efficient Networking by Hardware Acceleration and AI-Driven Management
+
+#### Project Goal
+- Improve **energy efficiency** of Beyond 5G (B5G) networks
+- Leverage **hardware acceleration** and **AI-driven orchestration**
+- Introduce a novel **“Intelligent Plane”** to complement the user and control plane---
+
+## 🏗️ Demonstration Architecture
+
+### Key Components
+<img width="1111" height="651" alt="image" src="https://github.com/user-attachments/assets/9dff388d-8558-4603-a7e0-c119127d1ee5" />
+
+#### a. **Intelligent Plane**
+- New logical plane for AI-driven orchestration
+- Coordinates **data, model, inference exchange** between network functions
+- Supports O-RAN interfaces (R1, A1, E2, O1, O2)
+
+#### b. **AI Engine**
+- Hosts and manages AI/ML model lifecycle
+- Supports **federated learning** with deployment at Near-RT RIC
+- Integrates explainable AI (e.g., Shapley values) to assess energy influence
+
+#### c. **Hardware Offloading Engine (Fig. III-1)**
+<img width="553" height="286" alt="image" src="https://github.com/user-attachments/assets/b2359d26-cb55-4c45-aa1b-5b0204076f41" />
+
+- GPU-based offload for mMIMO tasks:
+  - FFT
+  - Matrix inversion
+  - Beamforming weights
+  - LDPC decoding
+- Supports scalable deployment from edge (DU) to cloud infrastructure
+
+## 🤖 AI-Driven Management Use Cases
+
+| Use Case | Description |
+|----------|-------------|
+| **Power-aware VNF orchestration** | Dynamic CPU power states and VNF instance adjustment |
+| **Edge AI optimization** | Minimizes energy while meeting real-time AI service needs |
+| **Energy-aware handover and MIMO control** | Enables 4x4 → 2x2 MIMO switching, carrier deactivation |
+| **eco-SON** | SON extended with energy-aware objectives (e.g., night-time idle policy) |---
+
+## 🌐 Sensing-Enhanced Functions (JCAS)
+
+- **Sensing-aided beam search/tracking** for reducing overhead
+- **RIS-assisted Digital Twins** for predictive resource allocation
+- **User localization & traffic estimation** for network-level optimization
 
 
 
----
 
 
----
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
