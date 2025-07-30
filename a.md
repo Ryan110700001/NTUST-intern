@@ -1,3 +1,5 @@
+### A). Integration strategiesn
+
 ### B).Demonstration architectures
 ### 6G Architecture for Enabling Predictable, Reliable and Deterministic Networks: The PREDICT6G Case-----
 
@@ -82,7 +84,7 @@ The architecture is composed of **two main pillars**:
 - **RIS-assisted Digital Twins** for predictive resource allocation
 - **User localization & traffic estimation** for network-level optimization
 
-##  C.Potential implementation challenges
+### C).Potential implementation challenges
 ### Open RAN: Challenges for Next Generation Mobile Networks – Summary
 
 ### l Implementation Challenges
