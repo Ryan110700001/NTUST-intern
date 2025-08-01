@@ -93,5 +93,10 @@ than we put the parameter into this function to get the optimized result<img wid
 
 
 
+<img width="1458" height="725" alt="image" src="https://github.com/user-attachments/assets/46e4fed6-1640-455f-9f4e-746fd865f536" />
+
+<img width="1600" height="688" alt="image" src="https://github.com/user-attachments/assets/06aa4179-110c-45d3-bc63-e99d39ceda2c" />
+<img width="1653" height="364" alt="image" src="https://github.com/user-attachments/assets/4b16afab-d63d-4aeb-bb8b-1b51996c34ef" />
+
 
 
