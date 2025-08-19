@@ -1,117 +1,57 @@
-# 5G NR UE Initial Access and Cell Search Procedure
+# 5G UE power on and Cell Search Procedure
+<img width="688" height="973" alt="image" src="https://github.com/user-attachments/assets/e09fdede-a34e-43d8-9477-3bc349bd814c" />
 
-## Introduction
+This document summarizes the UE (User Equipment) power-on process and the initial cell selection steps in 5G SA (Standalone) architecture.
 
-When a User Equipment (UE) is powered on, it attempts to connect to a 5G cell. The UE has no prior frequency knowledge and performs a **blind search** through:
-- **Storage List Search (SLS)**: Check previously stored frequencies.
-- **Full Band Search (FBS)**: Scan all supported frequencies if SLS fails
+## Step 1: UE Power ON and PLMN Selection
+- UE powers on and initializes hardware/software (e.g., baseband, RF, GNSS, sensors).
+- Reads USIM for IMSI, preferred PLMN list, access class, allowed networks.
+- Initializes protocol stack (L1 to L3, including NAS and RRC).
+- PLMN selection:
+  - **Automatic**: From priority list or strongest signal.
+  - **Manual**: User selects from UI.
+- Uses SIB1 for broadcasted PLMN info and validates with USIM info.
+- Ensures no PLMN barring or roaming restriction before proceeding.
 
-## Initial Steps of Cell Search
+## Step 2: Frequency Band Scanning
+- UE scans supported NR frequency bands based on operator list, previously connected bands, and UE capabilities.
+- Searches for Synchronization Signal Blocks (SSBs).
 
-### Step 1: RSSI Measurement
-UE scans all supported frequencies and measures **RSSI (Received Signal Strength Indicator)** for each.
+## Step 3: Cell Search and Synchronization
+- UE detects SSBs, which include:
+  - **PSS (Primary Synchronization Signal)**
+  - **SSS (Secondary Synchronization Signal)** → used to calculate PCI.
+  - **PBCH (Physical Broadcast Channel)** → carries MIB.
+- SSBs are transmitted as beams with indexes.
+- PCI (Physical Cell ID) = `3 × NID1 + NID2`
+<img width="953" height="437" alt="image" src="https://github.com/user-attachments/assets/96267d68-8fed-4af7-be30-c3f76de6e715" />
 
-### Step 2: RSSI Thresholding
-UE filters out frequencies with RSSI below a threshold (threshold implementation-specific).
+## Step 4: PBCH Decoding and MIB Extraction
+- UE decodes PBCH to extract MIB fields:
+  - `systemFrameNumber`
+  - `subCarrierSpacingCommon`
+  - `ssb-SubcarrierOffset`
+  - `dmrs-TypeA-Position`
+  - `cellBarred`, `intraFreqReselection`, etc.
 
-### Step 3: SSB Decoding
-UE scans **SSB (Synchronization Signal Block)** using **synchronization raster**.
+## Step 5: DCI Decoding and Initial BWP Configuration
+- UE decodes DCI Format 1_0 (from CORESET0) for SIB1 scheduling.
+- Uses MIB-provided configs to decode PDCCH and PDSCH.
+- Extracts **Initial BWP** (Bandwidth Part) settings from SIB1.
+  
+## Step 6: SIB1 Decoding
+- SIB1 includes:
+ <img width="941" height="371" alt="image" src="https://github.com/user-attachments/assets/3cfa4952-5ae5-4af3-af67-82c9d293f1af" />
 
----
 
-## Synchronization Signal Block (SSB) Search
-
-### Purpose of SSB
-- Obtain synchronization information
-- Identify **physical cell ID** (PCI)
-
-### SSB in Standalone vs. Non-Standalone
-- **Non-Standalone (NSA)**: No blind search; config via RRC
-- **Standalone (SA)**: Blind search is required to find SSB
-
----
-
-## Synchronization Raster and GSCN
-
-### What is GSCN?
-- **Global Synchronization Channel Number**
-- Like LTE’s channel raster but optimized for 5G's larger bandwidths
-
-### Scanning with GSCN
-- UE uses **GSCN positions** to perform sparse, efficient scanning
-- GSCN represents SSB center frequency
-- Formula:
-  - `SSREF = N × 1.2 MHz + M × 15 kHz`
-  - `GSCN = 3 × N + (M – 3)/2` (for 0–3 GHz)
-
-### Example Calculation
-- Scan #1: GSCN = 5279, M = 1  
-  → N = 1760  
-  → `Ssref = 2112.05 MHz`  
-  → `ARFCN = (2112.05 – 2110)/0.005 + 422000 = 422410`
-
-UE continues scanning GSCN values until SSB is detected.
-
----
-
-## SSB Mapping and Structure
-
-- **SSB Composition**: PSS, SSS, PBCH
-- **Occupies**: 20 RBs in frequency, 4 symbols in time
-- **Transmitted via**: Antenna Port 4000
-
-### PBCH (Physical Broadcast Channel)
-- Includes MIB (Master Information Block)
-- Modulated using QPSK
-- Uses DMRs (Demodulation Reference Signals) for decoding
-
----
-
-## PSS (Primary Synchronization Signal)
-
-- Determines physical-layer identity NID(2)
-- Generated via BPSK-modulated m-sequence (length 127)
-- Cyclic shift: 0, 43, 86 depending on PCI
-- Located in symbol 1 of the SSB
-
----
-
-## SSS (Secondary Synchronization Signal)
-
-- Determines PCI group number NID(1)
-- Mapped in symbol 3 of the SSB
-- Uses BPSK-modulated **Gold sequence** (length 127)
-- Total: 336 SSS sequences × 3 PSS options = 1008 PCIs
-
----
-
-## PCI (Physical Cell Identity)
-
-- Total in NR: **1008**
-  - LTE had 504
-- PCI = Combination of NID(1) + NID(2)
-
----
-
-## Time-Domain Resource Allocation
-
-### Example: Case A
-- Subcarrier Spacing: 15 kHz
-- Frequency: ≤ 3 GHz
-- Max SSBs per SS burst set = 4
-- SSB start symbols: 2, 8, 16, 22
-
----
-
-## SSB Location Calculation
-
-1. Get carrier bandwidth and subcarrier spacing
-2. Use formula:
-   - `SSB Subcarrier Offset = (FreqA – FreqSSB) / SubcarrierSpacing`
-
----
+## Step 7: Cell Selection
+- UE computes:
+  ```math
+  Qrxlevmeas = RSRP – q-RxLevMinOffset
+<img width="956" height="625" alt="image" src="https://github.com/user-attachments/assets/db0d6361-3dda-4931-b4ac-a3788f693eb4" />
 
 
 ---
+
 
 
