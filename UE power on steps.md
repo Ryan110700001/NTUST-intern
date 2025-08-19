@@ -48,8 +48,14 @@ This document summarizes the UE (User Equipment) power-on process and the initia
 - UE computes:
   ```math
   Qrxlevmeas = RSRP – q-RxLevMinOffset
+If Qrxlevmeas ≥ q-RxLevMin, then the cell is suitable.Final decision considers RSRP, RSRQ, SINR, PLMN match, cell barring.
 <img width="956" height="625" alt="image" src="https://github.com/user-attachments/assets/db0d6361-3dda-4931-b4ac-a3788f693eb4" />
+## Step 8: Random Access Procedure
+- Once the cell is deemed suitable:
 
+- UE starts Random Access Procedure: Preamble → RAR → RRC Connection Request → Setup → Complete
+- Uses configurations from servingCellConfigCommon in SIB1
+- Also uses UL BWP info from SIB1 (initialUplinkBWP)
 
 ---
 
